@@ -1,0 +1,11 @@
+name: Trigger
+
+on:
+  push:
+
+jobs:
+  delay-completion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait 10s
+        run: sleep 10

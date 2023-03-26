@@ -1,0 +1,13 @@
+name: Delayed
+
+on:
+  workflow_run:
+    workflows: [Trigger]
+    types: [completed]
+
+jobs:
+  confirm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm Run
+        run: echo 'Ran!'
